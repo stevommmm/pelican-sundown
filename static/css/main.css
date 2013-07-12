@@ -9,11 +9,14 @@ body {
 }
 
 .grv-img {
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
   margin-right: auto;
   margin-left: auto;
+  box-shadow: 0px 0px 20px #39c;
+  border: 1px solid black;
+  display: inline-block;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -75,7 +78,7 @@ code, pre {
 
 pre {
   padding:8px 15px;
-  background: #f8f8f8;  
+  background: #f8f8f8;
   border-radius:5px;
   border:1px solid #e5e5e5;
   overflow-x: auto;
@@ -133,6 +136,11 @@ header ul a {
   height:30px;
 }
 
+header .view {
+    display: inline;
+    padding-right: 10px;
+  }
+
 strong {
   color:#222;
   font-weight:700;
@@ -142,15 +150,27 @@ header .title {
   font-size: 28px;
   padding-top: 2px;
   padding-bottom: 8px;
+  /*display: inline-block;*/
+  margin: 0 auto;
+  width: 110px;
+}
+header .title-gravatar {
+  /*display: inline-block;*/
+  margin: 0 auto;
+  width: 110px;
 }
 
-div[class='social'] a {
-		background-repeat: no-repeat;
-		background-position: 3px 6px;
-		padding-left: 25px;
-	}
+.social {
+  border-top: 1px solid #39c;
+  position: relative;
+  margin-top: 5px;
+  padding-top: 5px;
+}
+.social a {
+  color: #888;
+}
 
-/* Icons */
+/* Icons
 .social a[href*='about.me'] {background-image: url('../images/icons/aboutme.png');}
 .social a[href*='bitbucket.org'] {background-image: url('../images/icons/bitbucket.png');}
 .social a[href*='delicious.com'] {background-image: url('../images/icons/delicious.png');}
@@ -173,7 +193,7 @@ div[class='social'] a {
 .social a[href*='twitter.com'] {background-image: url('../images/icons/twitter.png');}
 .social a[href*='vimeo.com'] {background-image: url('../images/icons/vimeo.png');}
 .social a[href*='youtube.com'] {background-image: url('../images/icons/youtube.png');}
-
+*/
 section {
   width:630px;
   float:right;
@@ -199,33 +219,33 @@ footer {
 }
 
 @media print, screen and (max-width: 960px) {
-  
+
   div.wrapper {
     width:auto;
     margin:0;
   }
-  
+
   header, section, footer {
     float:none;
     position:static;
     width:auto;
   }
-  
+
   header {
     padding-right:320px;
   }
-  
+
   section {
     border:1px solid #e5e5e5;
     border-width:1px 0;
     padding:20px 0;
     margin:0 0 20px;
   }
-  
+
   header a small {
     display:inline;
   }
-  
+
   header ul {
     position:absolute;
     right:50px;
@@ -237,15 +257,17 @@ footer {
   body {
     word-wrap:break-word;
   }
-  
+
   header {
     padding:0;
   }
-  
-  header ul, header p.view {
+
+  header ul, header.view {
     position:static;
+    display: inline;
+    padding-right: 10px;
   }
-  
+
   pre, code {
     word-wrap:normal;
   }
@@ -255,7 +277,7 @@ footer {
   body {
     padding:15px;
   }
-  
+
   header ul {
     padding-bottom: 10px;
   }
