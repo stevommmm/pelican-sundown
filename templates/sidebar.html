@@ -1,4 +1,5 @@
 {% if DISPLAY_PAGES_ON_MENU -%}
+    <div class="view"><a href="{{ SITEURL }}/">Home</a></div>
   {% for page in PAGES %}
     <div class="view"><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></div>
   {% endfor %}
